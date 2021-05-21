@@ -479,4 +479,28 @@ class Market {
 	public function search($access_token, array $params = []) {
 		return $this->request->post('market.search', $access_token, $params);
 	}
+
+    /**
+     * Return list order
+     * @param $access_token
+     * @param array $params
+     * @return array|mixed
+     * @throws VKApiException
+     * @throws VKClientException
+     */
+    public function getOrders($access_token, array $params = []) {
+        return $this->request->post('market.getOrders', $access_token, $params);
+    }
+
+    /**
+     * Return list items from order
+     * @param $access_token
+     * @param array $params
+     * @return array|mixed
+     * @throws VKApiException
+     * @throws VKClientException
+     */
+    public function getOrderItems($access_token, array $params = []) {
+        return $this->request->post('market.getOrderItems', $access_token, $params);
+    }
 }
