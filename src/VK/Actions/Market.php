@@ -516,4 +516,18 @@ class Market {
     {
         return $this->request->post('market.editOrder', $access_token, $params);
     }
+	
+     /**
+     * Get order
+     * @param $access_token
+     * @param array $params
+     * @return array|mixed
+     * @throws VKApiException
+     * @throws VKClientException
+     */
+    public function getOrderById($access_token, array $params = [])
+    {
+        return $this->request->post('market.getOrderById', $access_token, $params);
+    }
+	
 }
