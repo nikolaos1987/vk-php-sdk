@@ -493,6 +493,18 @@ class Market {
     }
 
     /**
+     * Return list order group
+     * @param $access_token
+     * @param array $params
+     * @return array|mixed
+     * @throws VKApiException
+     * @throws VKClientException
+     */
+    public function getGroupOrders($access_token, array $params = []) {
+        return $this->request->post('market.getGroupOrders', $access_token, $params);
+    }
+
+    /**
      * Return list items from order
      * @param $access_token
      * @param array $params
